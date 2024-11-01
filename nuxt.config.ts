@@ -29,9 +29,9 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   app: {
     head: {
-      title: 'betDukes - Your Casino!',
+      title: 'Dukes Casino - Your Casino!',
       meta: [
-        { name: 'description', content: "Enjoy seamless mobile gaming with betDukes's mobile slots." }
+        { name: 'description', content: "Enjoy seamless mobile gaming with Dukes Casino's mobile slots." }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/bd-faviconV2.png' },
