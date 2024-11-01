@@ -97,7 +97,7 @@
         </div>
         <div class="flex items-center justify-center">
           <img 
-            src="../static/betdukes.webp" 
+            src="../static/dukescasino-logo-new.png" 
             loading="lazy" 
             alt="Hippozino Casino footer Logo"
             class="footer_logo p-5 shadow-md rounded-lg" height="" width="" />
