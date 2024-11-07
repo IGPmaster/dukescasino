@@ -97,9 +97,9 @@
         </div>
         <div class="flex items-center justify-center">
           <img 
-            src="../static/dukescasino-logo-new.png" 
+            src="../static/dukescasino.webp" 
             loading="lazy" 
-            alt="Hippozino Casino footer Logo"
+            alt="Dukes Casino footer Logo"
             class="footer_logo p-5 shadow-md rounded-lg" height="" width="" />
         </div>
       </div>
