@@ -1,0 +1,2 @@
+import{ao as a,r as s,ap as e,Y as u,aq as r,ar as t,as as o,a8 as n,at as p}from"../build/server.mjs";function useHead(c,i={}){const l=i.head||a();if(l)return l.ssr?l.push(c,i):function(a,c,i={}){const l=s(!1),v=s({});e((()=>{v.value=l.value?{}:p(c)}));const d=a.push(v.value,i);u(v,(a=>{d.patch(a)}));n()&&(r((()=>{d.dispose()})),t((()=>{l.value=!0})),o((()=>{l.value=!1})));return d}(l,c,i)}export{useHead as u};
+//# sourceMappingURL=vue.-sixQ7xP.mjs.map

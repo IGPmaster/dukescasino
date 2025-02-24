@@ -1,0 +1,16 @@
+{
+  "date": "2025-02-24T17:07:14.829Z",
+  "preset": "cloudflare-pages",
+  "framework": {
+    "name": "nuxt",
+    "version": "3.14.159"
+  },
+  "versions": {
+    "nitro": "2.10.4"
+  },
+  "commands": {
+    "preview": "npx wrangler pages dev ./",
+    "deploy": "npx wrangler pages deploy ./"
+  },
+  "config": {}
+}

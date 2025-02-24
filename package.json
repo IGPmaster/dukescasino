@@ -20,7 +20,7 @@
     "cookie": "^0.7.1"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": "^18.20.5"
   },
   "overrides": {
     "esbuild": "^0.19.12",

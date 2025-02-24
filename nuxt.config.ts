@@ -8,7 +8,6 @@ export default defineNuxtConfig({
       publicDir: '.output/public'
     },
     prerender: {
-      fallback: true,
       crawlLinks: true,     // Add this to prerender linked pages
       routes: ['/']         // Add this to ensure root is prerendered
     }
@@ -43,4 +42,21 @@ export default defineNuxtConfig({
       ],
     }
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: ''
+        }
+      }
+    },
+    build: {
+      cssCodeSplit: true,
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name][extname]'
+        }
+      }
+    }
+  }
 });
