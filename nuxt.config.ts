@@ -10,7 +10,13 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,     // Add this to prerender linked pages
       routes: ['/']         // Add this to ensure root is prerendered
-    }
+    },
+    publicAssets: [
+      {
+        dir: 'public',
+        maxAge: 60 * 60 * 24 * 365 // Cache for 1 year
+      }
+    ]
   },
   // Use ISR (Incremental Static Regeneration) for all routes
   routeRules: {
@@ -40,7 +46,8 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
         }
       ],
-    }
+    },
+    baseURL: '/' // Ensure base URL is set correctly
   },
   vite: {
     css: {

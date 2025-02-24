@@ -24,7 +24,7 @@
           </div>
           <div class="flex justify-center">
             <NuxtLink to="/">
-              <img src="../static/dukescasino.webp" alt="Dukes Casino header Logo" width="200" height="auto">
+              <img src="/dukescasino.webp" alt="Dukes Casino header Logo" width="200" height="auto">
             </NuxtLink>
           </div>
           <div class="right">

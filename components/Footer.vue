@@ -102,7 +102,7 @@
         </div>
         <div class="flex items-center justify-center">
           <img 
-            src="../static/dukescasino.webp" 
+            src="/dukescasino-logo-new.png" 
             loading="lazy" 
             alt="Dukes Casino footer Logo"
             class="footer_logo p-5 shadow-md rounded-lg" 
