@@ -56,7 +56,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { msgTranslate, regLink, loginLink, loadLang } from '~/composables/globalData';
-
+ import CookieConsent from '~/components/CookieConsent.vue';
 const menuIsOpen = ref(false);
 
 // Add async data loading

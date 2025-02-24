@@ -88,6 +88,11 @@
           <li>
             <NuxtLink to="/compliance/terms" class="compliance-btn">{{ msgTranslate?.terms || 'Terms' }}</NuxtLink>
           </li>
+             <li>
+     <button @click="handleOpenPreferences" class="compliance-btn">
+       {{ msgTranslate?.cookie_settings || 'Cookie Settings' }}
+     </button>
+   </li>
         </ul>
         <div v-for="icon in footerIcons" :key="icon.Name">
           <div v-html="icon.Html"></div>
@@ -139,7 +144,8 @@ import {
   loadLang,
   lang 
 } from '~/composables/globalData';
-
+   import { useCookieConsent } from '~/composables/useCookieConsent';
+   const { handleOpenPreferences } = useCookieConsent();
 // Add async data loading
 await useAsyncData('translations', async () => {
   try {

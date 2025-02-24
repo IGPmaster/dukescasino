@@ -9,13 +9,21 @@
     "postinstall": ""
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "@types/node": "^22",
-    "nuxi": "^3.15.0",
-    "nuxt": "^3.13.2"
+    "@nuxtjs/tailwindcss": "^6.13.1",
+    "@types/node": "^20.11.24",
+    "nuxi": "^3.22.2",
+    "nuxt": "^3.15.4"
   },
   "dependencies": {
     "@gtm-support/vue-gtm": "^3.1.0",
-    "wrangler": "^3.83.0"
+    "wrangler": "^3.28.2",
+    "cookie": "^0.7.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "overrides": {
+    "esbuild": "^0.19.12",
+    "vite": "^5.1.4"
   }
 }
