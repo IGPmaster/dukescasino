@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   // Keep SSR true for Cloudflare Pages
   ssr: true,
+
   nitro: {
     preset: 'cloudflare-pages',
     output: {
@@ -18,21 +19,27 @@ export default defineNuxtConfig({
       }
     ]
   },
+
   // Use ISR (Incremental Static Regeneration) for all routes
   routeRules: {
     '/**': { isr: true }
   },
+
   // Add this experimental feature for better Cloudflare Pages compatibility
   experimental: {
     payloadExtraction: false
   },
+
   css: ['~/assets/main.css'],
+
   plugins: [
     '~/plugins/language.js',
     '~/plugins/hreflang.js',
     '~/plugins/vue-gtm.client.js',
   ],
+
   modules: ['@nuxtjs/tailwindcss'],
+
   app: {
     head: {
       title: 'Dukes Casino - Your Casino!',
@@ -49,6 +56,7 @@ export default defineNuxtConfig({
     },
     baseURL: '/' // Ensure base URL is set correctly
   },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -65,5 +73,7 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+
+  compatibilityDate: '2025-04-03'
 });
