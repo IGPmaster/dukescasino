@@ -34,9 +34,28 @@ export default defineNuxtPlugin((nuxtApp) => {
         // Add GTM instance to app
         nuxtApp.vueApp.use(gtmInstance);
 
+        // Check if GTM script is already loaded
+        const isGtmScriptLoaded = () => {
+            return Array.from(document.getElementsByTagName('script'))
+                .some(script => script.src && script.src.includes('googletagmanager.com/gtm.js'));
+        };
+
         // Function to initialize GTM
         window.initializeGTM = () => {
             try {
+                // If GTM script is already loaded, don't load it again
+                if (isGtmScriptLoaded()) {
+                    console.log('GTM script already loaded, skipping duplicate load');
+                    
+                    // Still push initial pageview to ensure tracking
+                    window.dataLayer.push({
+                        'event': 'pageview',
+                        'page_path': window.location.pathname
+                    });
+                    
+                    return;
+                }
+
                 // Load GTM script
                 const script = document.createElement('script');
                 script.async = true;
@@ -59,16 +78,18 @@ export default defineNuxtPlugin((nuxtApp) => {
                 
                 document.head.appendChild(script);
 
-                // Add noscript iframe for better tracking coverage
-                const noscript = document.createElement('noscript');
-                const iframe = document.createElement('iframe');
-                iframe.src = `https://www.googletagmanager.com/ns.html?id=${SITE_CONFIG.gtmId}`;
-                iframe.height = '0';
-                iframe.width = '0';
-                iframe.style.display = 'none';
-                iframe.style.visibility = 'hidden';
-                noscript.appendChild(iframe);
-                document.body.appendChild(noscript);
+                // Add noscript iframe for better tracking coverage (only once)
+                if (!document.querySelector('noscript iframe[src*="googletagmanager.com/ns.html"]')) {
+                    const noscript = document.createElement('noscript');
+                    const iframe = document.createElement('iframe');
+                    iframe.src = `https://www.googletagmanager.com/ns.html?id=${SITE_CONFIG.gtmId}`;
+                    iframe.height = '0';
+                    iframe.width = '0';
+                    iframe.style.display = 'none';
+                    iframe.style.visibility = 'hidden';
+                    noscript.appendChild(iframe);
+                    document.body.appendChild(noscript);
+                }
             } catch (error) {
                 console.warn('Error initializing GTM:', error);
             }
