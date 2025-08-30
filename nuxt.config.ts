@@ -22,6 +22,7 @@ export default defineNuxtConfig({
 
   // Use ISR (Incremental Static Regeneration) for all routes
   routeRules: {
+    '/api/**': { prerender: false }, // CloudFlare Functions - don't prerender API routes
     '/**': { isr: true }
   },
 

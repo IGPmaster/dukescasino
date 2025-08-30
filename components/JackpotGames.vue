@@ -74,32 +74,23 @@
 	</div>
 </template>
 <script setup>
-
 import { ref, onMounted, defineEmits } from 'vue';
+import { jackpotGames, msgTranslate, regLink, loginLink, loadLang, fetchGames } from '~/composables/globalData';
+
 const loading = ref(true);
-
-import { jackpotGames, msgTranslate, regLink, loginLink, loadLang } from '~/composables/globalData';
-
 const emit = defineEmits(['loaded']);
 
-onMounted(async () => {
-	try {
-		await fetchGames();
-		await useAsyncData('translations', async () => {
-			try {
-				await loadLang();
-			} catch (error) {
-				console.error('Error loading translations:', error);
-			}
-		});
-	} catch (error) {
-		console.error('Error fetching promotions:', error);
-	} finally {
-		loading.value = false;
-		emit('loaded');
-	}
+// SILVER BULLET VPN FIX: Single call for both SSR and client - no duplicate onMounted call
+await useAsyncData('jackpot-game-component-data', async () => {
+	await loadLang();
+	await fetchGames(); // ✅ Only call needed
 });
 
+onMounted(() => {
+	// No API call, just UI state
+	loading.value = false;
+	emit('loaded');
+});
 </script>
 
 <style scoped>

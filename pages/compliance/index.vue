@@ -19,37 +19,34 @@
 
 
 <script setup>
-
-function updateCode(key, globalContent) {
-    const code = globalContent[key];
-    return code; // Return the code value
-}
-
-async function fetchContent(code) {
-    try {
-        const response = await fetch(
-            `${PP_API_URL}GetInfoContentByCode?whitelabelId=${WHITELABEL_ID}&country=${lang.value}&code=${code}`
-        );
-        const data = await response.json();
-        return data[0].Html; // Return the Html content instead of updating the ref
-    } catch (error) {
-        console.error(error);
-    }
-}
-
 import { ref } from 'vue';
-import { msgTranslate, globalContent } from '~/composables/globalData';
+import { msgTranslate, globalContent, loadLang, fetchCachedContent } from '~/composables/globalData';
 
 const htmlContent = ref('');
 
-(async () => {
-    htmlContent.value = await fetchContent('aboutus'); // Set the htmlContent.value here
-
-})();
+// SILVER BULLET VPN FIX: Use optimized fetchCachedContent with local CloudFlare Function
+await useAsyncData('compliance-index-content', async () => {
+    try {
+        await loadLang(); // Ensure language is loaded first
+        console.log('📄 COMPLIANCE INDEX: Loading default content (aboutus)');
+        htmlContent.value = await fetchCachedContent('aboutus');
+        console.log('✅ COMPLIANCE INDEX: Default content loaded successfully');
+    } catch (error) {
+        console.error('❌ COMPLIANCE INDEX: Error loading content:', error);
+        htmlContent.value = '<p>Error loading content. Please try again later.</p>';
+    }
+});
 
 const handleClick = async (key) => {
-    const code = updateCode(key, globalContent.value); // Use globalContent.value here
-    htmlContent.value = await fetchContent(code);
+    const code = globalContent.value[key];
+    try {
+        console.log('📄 COMPLIANCE INDEX: Fetching content for code:', code);
+        htmlContent.value = await fetchCachedContent(code);
+        console.log('✅ COMPLIANCE INDEX: Content loaded for:', code);
+    } catch (error) {
+        console.error('❌ COMPLIANCE INDEX: Error loading content:', error);
+        htmlContent.value = '<p>Error loading content. Please try again later.</p>';
+    }
 };
 </script>
 

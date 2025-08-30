@@ -19,34 +19,35 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import { ref } from 'vue';
-import { msgTranslate, globalContent, loadTranslations } from '~/composables/globalData';
+import { msgTranslate, globalContent, loadLang, fetchCachedContent } from '~/composables/globalData';
 
 const route = useRoute();
 const slug = route.params.slug;
 
-async function fetchContent(slug) {
-    try {
-        const response = await fetch(
-            `${PP_API_URL}GetInfoContentByCode?whitelabelId=${WHITELABEL_ID}&country=${lang.value}&code=${slug}`
-            //`http://content.progressplay.net/api23/api/GetInfoContentByCode?whitelabelId=10&country=en&Code=${slug}`
-        );
-        const data = await response.json();
-        return data[0].Html; // Return the Html content instead of updating the ref
-    } catch (error) {
-        console.error(error);
-    }
-}
-
 const htmlContent = ref('');
 
-(async () => {
-    htmlContent.value = await fetchContent(slug); // Set the htmlContent.value here
-    await loadTranslations();
-})();
+// SILVER BULLET VPN FIX: Use optimized fetchCachedContent with local CloudFlare Function
+await useAsyncData('compliance-content', async () => {
+    try {
+        await loadLang(); // Ensure language is loaded first
+        console.log('📄 COMPLIANCE: Fetching content for slug:', slug);
+        htmlContent.value = await fetchCachedContent(slug);
+        console.log('✅ COMPLIANCE: Content loaded successfully');
+    } catch (error) {
+        console.error('❌ COMPLIANCE: Error loading content:', error);
+        htmlContent.value = '<p>Error loading content. Please try again later.</p>';
+    }
+});
 
 const handleClick = async (key) => {
-    const code = updateCode(key, globalContent.value); // Use globalContent.value here
-    htmlContent.value = await fetchContent(code);
+    const code = globalContent.value[key];
+    try {
+        console.log('📄 COMPLIANCE: Fetching content for code:', code);
+        htmlContent.value = await fetchCachedContent(code);
+    } catch (error) {
+        console.error('❌ COMPLIANCE: Error loading content:', error);
+        htmlContent.value = '<p>Error loading content. Please try again later.</p>';
+    }
 };
 </script>
 

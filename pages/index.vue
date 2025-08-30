@@ -48,29 +48,32 @@
 </template>
 
 <script setup>
-
 import { ref, onMounted, defineEmits } from 'vue';
+import { promotionsPosts, pp_promotions, regLink, fetchPromotions, fetchApiPromotions, loadLang, fetchGames } from '~/composables/globalData';
+
 const loading = ref(true);
-
-import { promotionsPosts, regLink, fetchPromotions } from '~/composables/globalData';
-
 const emit = defineEmits(['loaded']);
 
-const { fetch, error, $fetchState } = useFetch(async () => {
-	await fetchApiPromotions();
+// SILVER BULLET VPN FIX: Single shared API call for homepage
+await useAsyncData('homepage-data', async () => {
+	try {
+		console.log('🏠 HOMEPAGE: Loading all data...');
+		await loadLang();
+		await fetchGames(); // ✅ Single call for all game components
+		await fetchApiPromotions(); // Load PP promotions
+		await fetchPromotions(); // Load WP promotions
+		console.log('✅ HOMEPAGE: All data loaded successfully');
+	} catch (error) {
+		console.error('❌ HOMEPAGE: Error loading data:', error);
+	}
 });
 
-onMounted(async () => {
-	try {
-		await fetchPromotions();
-		loading.value = false;
-	} catch (error) {
-		console.error('Error fetching promotions:', error);
-	}
+onMounted(() => {
+	// No API calls, just UI state
 	loading.value = false;
 	emit('loaded');
+	console.log('🏠 HOMEPAGE: Component mounted');
 });
-
 </script>
 
 <style scoped>
