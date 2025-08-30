@@ -20,7 +20,7 @@
 
 		<!-- Promotions Grid -->
 		<div class="container mx-auto px-4">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+			<div class="promotions-grid grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 				<div v-for="promo in pp_promotions" :key="promo.code" class="group">
 					<div class="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-102 border border-white/10">
 						<div class="relative overflow-hidden">
@@ -111,5 +111,22 @@ p {
     color: #f2f4e8;
     background: transparent;
     border-radius: 5px;
+}
+
+/* Ensure promotions grid works properly */
+@media (min-width: 768px) {
+    .promotions-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .promotions-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
 }
 </style>
