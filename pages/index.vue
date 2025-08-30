@@ -18,9 +18,14 @@
 			<div v-html="rest.acf.promo_over" class="text-center text-primary leading-relaxed"></div>
 		</div>
 
+		<!-- Debug: Show data status -->
+		<div class="container mx-auto px-4 mb-4 text-center">
+			<p class="text-primary text-sm">PP Promotions: {{ pp_promotions?.length || 0 }} items</p>
+		</div>
+
 		<!-- Promotions Grid -->
 		<div class="container mx-auto px-4">
-			<div class="promotions-grid grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+			<div v-if="pp_promotions && pp_promotions.length > 0" class="promotions-grid grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 				<div v-for="promo in pp_promotions" :key="promo.code" class="group">
 					<div class="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-102 border border-white/10">
 						<div class="relative overflow-hidden">
@@ -46,6 +51,10 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<!-- Fallback: Show message if no promotions -->
+			<div v-else class="container mx-auto px-4 text-center">
+				<p class="text-primary">Loading promotions...</p>
 			</div>
 		</div>
 
