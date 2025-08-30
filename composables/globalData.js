@@ -169,8 +169,8 @@ export async function loadLang() {
         langValue = originalLang;
         // CA PLAYTECH FILTERING: Track if this is a real supported country
         if (typeof window !== 'undefined') {
-          (window as any).__isRealCountry = true;
-          (window as any).__originalDetectedCountry = originalLang;
+          window.__isRealCountry = true;
+          window.__originalDetectedCountry = originalLang;
         }
       } else {
         // EU FALLBACK FIX: Use proper fallback logic
@@ -179,8 +179,8 @@ export async function loadLang() {
         langValue = fallbackCountry;
         // CA PLAYTECH FILTERING: Track that this is a fallback country
         if (typeof window !== 'undefined') {
-          (window as any).__isRealCountry = false;
-          (window as any).__originalDetectedCountry = originalLang;
+          window.__isRealCountry = false;
+          window.__originalDetectedCountry = originalLang;
         }
       }
     } catch (error) {
@@ -441,8 +441,8 @@ async function actuallyFetchGames() {
 
     // CA PLAYTECH FILTERING: Log current CA status for debugging
     if (typeof window !== 'undefined' && lang.value === 'CA') {
-      const isRealCountry = (window as any).__isRealCountry;
-      const originalDetectedCountry = (window as any).__originalDetectedCountry;
+      const isRealCountry = window.__isRealCountry;
+      const originalDetectedCountry = window.__originalDetectedCountry;
       if (isRealCountry && originalDetectedCountry === 'CA') {
         console.log('🇨🇦 PLAYTECH: Real CA detected - Playtech games will be filtered');
       } else if (!isRealCountry) {
@@ -462,8 +462,8 @@ async function actuallyFetchGames() {
       // CA PLAYTECH FILTERING: Filter Playtech games only for real CA users
       let isPlaytechExcluded = false;
       if (typeof window !== 'undefined') {
-        const isRealCountry = (window as any).__isRealCountry;
-        const originalDetectedCountry = (window as any).__originalDetectedCountry;
+        const isRealCountry = window.__isRealCountry;
+        const originalDetectedCountry = window.__originalDetectedCountry;
         
         if (lang.value === 'CA' && isRealCountry && originalDetectedCountry === 'CA') {
           const isPlaytech = game.provider?.toLowerCase() === 'playtech' || 
