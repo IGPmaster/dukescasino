@@ -48,9 +48,9 @@ const KV_SUPPORTED_COUNTRIES = "https://access-supportedcountries.tech1960.worke
 const IGP_SUPPORTED_COUNTRIES = "https://igp-supported-countries.tech1960.workers.dev/";
 const KV_TRANSLATIONS ="https://access-translations.tech1960.workers.dev/";
 
-// SILVER BULLET VPN FIX: Local CloudFlare Functions for all API calls
-const PROMOTIONS_URL = '/api/pp/promotions';        // Was: https://access-content-pp.tech1960.workers.dev/?type=promotions
-const CONTENT_URL = '/api/pp/content';              // Was: https://access-content-pp.tech1960.workers.dev/?type=content
+// CORRECTED: LOCAL functions for GAMES only, EXTERNAL workers for promotions/content/footer
+const PROMOTIONS_URL = 'https://access-content-pp.tech1960.workers.dev/';  // EXTERNAL worker for KV caching
+const CONTENT_URL = 'https://access-content-pp.tech1960.workers.dev/';     // EXTERNAL worker for KV caching
 
 // Add caching variables for optimization (Silver Bullet VPN Fix)
 let gamesCache = null;
@@ -269,9 +269,9 @@ async function fetchApiPromotions() {
     console.log('🔍 UNIFIED: WHITELABEL_ID =', WHITELABEL_ID);
     console.log('🔍 UNIFIED: process.client =', process.client);
     
-    // Use local CloudFlare Function for client-side calls
+    // Use external CloudFlare Worker for KV caching on client-side
     const apiUrl = process.client
-      ? `${PROMOTIONS_URL}?whitelabelId=${WHITELABEL_ID}&country=${lang.value}`
+      ? `${PROMOTIONS_URL}?type=promotions&whitelabelId=${WHITELABEL_ID}&country=${lang.value}`
       : `${PP_API_URL}PromotionsInfo?whitelabelId=${WHITELABEL_ID}&country=${lang.value}`;
     
     console.log('📡 UNIFIED: Fetching promotions from URL:', apiUrl);
@@ -282,8 +282,8 @@ async function fetchApiPromotions() {
     
     const responseData = await response.json();
     
-    // Handle unified response format vs direct API format
-    const data = process.client ? responseData : responseData;
+    // Handle external worker response format vs direct API format
+    const data = process.client ? responseData.promotions : responseData;
     
     console.log('✅ UNIFIED: Data received:', Array.isArray(data) ? `Array with ${data.length} items` : typeof data);
     console.log('📄 UNIFIED: Data sample:', data ? JSON.stringify(data).substring(0, 200) : 'No data');
