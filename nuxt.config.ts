@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/api/**': { prerender: false }, // CloudFlare Functions - don't prerender API routes
     '/compliance/**': { prerender: false }, // Disable prerendering for compliance pages due to API dependencies
+    '/all-games': { prerender: false }, // Disable prerendering for all-games page (contains external game links)
     '/**': { isr: true }
   },
 
