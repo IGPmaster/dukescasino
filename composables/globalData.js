@@ -780,8 +780,6 @@ export {
     countriesData,
     countryNotSupported,
     fetchGames,
-    fetchFooterContent,
-    fetchCachedContent,
     getCookie, 
     setCookie, 
 };
