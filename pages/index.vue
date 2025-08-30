@@ -20,21 +20,21 @@
 
 		<!-- Promotions Grid -->
 		<div class="container mx-auto px-4">
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
 				<div v-for="promo in pp_promotions" :key="promo.code" class="group">
 					<div class="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-102 border border-white/10">
 						<div class="relative overflow-hidden">
 							<a :href="regLink" class="block">
 								<img 
-									class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" 
+									class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" 
 									:src="promo.bigImageUrl" 
 									loading="lazy"
 									:alt="'Image of ' + promo.title + ' promotion.'"
 									:title="promo.title + ', ' + promo.subTitle">
-								<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-								<div class="absolute bottom-3 left-3 right-3">
-									<h3 class="text-white text-lg font-bold mb-1">{{ promo.title }}</h3>
-									<p class="text-white/90 text-xs">{{ promo.subTitle }}</p>
+								<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+								<div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+									<h3 class="text-white text-xl font-bold mb-2 drop-shadow-lg">{{ promo.title }}</h3>
+									<p class="text-white/90 text-sm drop-shadow-md">{{ promo.subTitle }}</p>
 								</div>
 							</a>
 						</div>
