@@ -164,10 +164,10 @@ const filterGames = () => {
 }
 // Set page-specific meta tags
 useHead({
-	title: 'All Games - Hippozino',
+	title: 'All Games - Dukes Casino',
 	meta: [
-		{ hid: 'description', name: 'description', content: 'Explore all the best games available at Hippozino!' },
-		{ name: 'keywords', content: 'allgames, games, casino, Hippozino' }
+		{ hid: 'description', name: 'description', content: 'Explore all the best games available at Dukes Casino!' },
+		{ name: 'keywords', content: 'allgames, games, casino, Dukes Casino' }
 	]
 });
 </script>

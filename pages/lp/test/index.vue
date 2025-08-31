@@ -4,28 +4,28 @@
             <img src="https://igpcrma2n.s3.amazonaws.com/ppcms/halloween-tournament/lp-halloween-promotions.png" loading="lazy" class="mx-auto"/>
             <div>
     <!-- Content visible only on mobile (small screens) -->
-    <p class="text-lg text-orange-100 block lg:hidden">Enjoy Amazing Halloween Promos at Hippozino TEST!</p>
+    <p class="text-lg text-orange-100 block lg:hidden">Enjoy Amazing Halloween Promos at Dukes Casino TEST!</p>
 
     <!-- Content visible only on desktop (large screens) -->
-    <p class="text-xl text-orange-100 hidden lg:block">Are you looking for a spooktacular way to celebrate Halloween this year? Look no further than Hippozino, where the Halloween festivities are in full swing! Whether you're a fan of creepy crawly slots or prefer something a little more light-hearted, Hippozino has something for everyone this Halloween season. Let's dive into all the festive fun you can expect at Hippozino this Halloween!</p>
+    <p class="text-xl text-orange-100 hidden lg:block">Are you looking for a spooktacular way to celebrate Halloween this year? Look no further than Dukes Casino, where the Halloween festivities are in full swing! Whether you're a fan of creepy crawly slots or prefer something a little more light-hearted, Dukes Casino has something for everyone this Halloween season. Let's dive into all the festive fun you can expect at Dukes Casino this Halloween!</p>
 </div>
         </div>
         <div class="container mx-auto p-4 bg-orange-600 shadow-black shadow-lg lg:rounded-lg items-center">
     <div class="flex flex-col lg:flex-row">
        
         <div class="w-full lg:w-5/12">
-            <a href="https://lobby.hippozino.com/?nav=login"><img class="rounded-lg w-full" src="https://igpcrma2n.s3.amazonaws.com/ppcms/halloween-tournament/lp-halloween-slot-tournament.png" loading="lazy"></a>
+            <a href="https://dukescasino.casino-pp.net/?nav=login"><img class="rounded-lg w-full" src="https://igpcrma2n.s3.amazonaws.com/ppcms/halloween-tournament/lp-halloween-slot-tournament.png" loading="lazy"></a>
         </div>
 
         
         <div class="px-0 pt-2 lg:p-4 w-full lg:w-7/12">
             <div><h2 class="text-orange-100 font-bold text-2xl lg:text-4xl leading-tight">Spooktacular Slot Tournament</h2>
                 <h4 class="text-xl lg:text-3xl font-bold text-yellow-300 mt-0 leading-tight">£1,000 Prize Pool!</h4>
-                    <p class="text-lg leading-tight">One of the highlights of Halloween at Hippozino is the special Spooktacular Slot Tournament. This thrilling competition pits players against each other in a race to the top of the leaderboard. With a fantastic prize pool of £1000 in cash shared between the top 50 players, there's plenty of incentive to join in the fun and test your luck on the spooky reels. Will you be one of the lucky winners this Halloween?</p>
+                    <p class="text-lg leading-tight">One of the highlights of Halloween at Dukes Casino is the special Spooktacular Slot Tournament. This thrilling competition pits players against each other in a race to the top of the leaderboard. With a fantastic prize pool of £1000 in cash shared between the top 50 players, there's plenty of incentive to join in the fun and test your luck on the spooky reels. Will you be one of the lucky winners this Halloween?</p>
                     </div>
                         <div class="text-center"><a href="https://lobby.hippozino.com/?nav=login"><button class="bg-gray-800 hover:bg-gray-900 text-yellow-300 font-bold uppercase my-3 py-3 px-6 rounded-lg">Enter The Tournament</button></a></div>
                 
-                        <div class="text-sm/[14px] py-5 text-slate-300">Funded players only (18+ Only). Points accumulated based on wagering on any slot games excluding jackpot games. £/€/$1 wagered equals 1 point on leaderboard. Top prize is £/€/$150. £/€/$ 1000 will be shared between top 50 players. Promotion runs from October 25th – 31st. <a href="https://hippozino.casino-pp.net/promotions?code=IGPHalloweenTournament24" class="underline">Full Terms Apply</a>
+                        <div class="text-sm/[14px] py-5 text-slate-300">Funded players only (18+ Only). Points accumulated based on wagering on any slot games excluding jackpot games. £/€/$1 wagered equals 1 point on leaderboard. Top prize is £/€/$150. £/€/$ 1000 will be shared between top 50 players. Promotion runs from October 25th – 31st. <a href="https://dukescasino.casino-pp.net/promotions?code=IGPHalloweenTournament24" class="underline">Full Terms Apply</a>
                         </div>
                     
         </div>
@@ -43,7 +43,7 @@
         <div class="px-0 pt-2 lg:p-4 w-full lg:w-7/12">
             <div><h2 class="text-orange-100 font-bold text-2xl lg:text-4xl">Terrifyingly Good Games</h2>
                 <h4 class="text-xl lg:text-3xl font-bold text-yellow-300 mt-0">Play Spooky Slots with Scary Spins!</h4>
-                        <p class="text-lg leading-tight">Get into the Halloween spirit with a great selection of games at Hippozino. From the bone-chilling Big Bass Halloween to the blood-curdling Bloodsuckers, there's no shortage of spooky thrills to be had. If you're looking for something a little more light-hearted, why not give Spooky Carnival a spin? With its colourful graphics and festive atmosphere, this game is sure to get you in the Halloween mood.</p>
+                        <p class="text-lg leading-tight">Get into the Halloween spirit with a great selection of games at Dukes Casino. From the bone-chilling Big Bass Halloween to the blood-curdling Bloodsuckers, there's no shortage of spooky thrills to be had. If you're looking for something a little more light-hearted, why not give Spooky Carnival a spin? With its colourful graphics and festive atmosphere, this game is sure to get you in the Halloween mood.</p>
                     </div>
                         <div class="text-center"><a href="https://lobby.hippozino.com/?nav=login"><button class="bg-black hover:bg-gray-800 text-yellow-300 font-bold uppercase my-3 py-3 px-6 rounded-lg">Play Spooky Games</button></a></div>
                 
@@ -58,7 +58,7 @@
     <div class="flex flex-col lg:flex-row">
        
         <div class="w-full lg:w-5/12">
-            <a href="https://lobby.hippozino.com/?nav=login"><img class="rounded-lg w-full" src="https://igpcrma2n.s3.amazonaws.com/ppcms/halloween-tournament/lp-halloween-deposit-bonus.png" loading="lazy"></a>
+            <a href="https://dukescasino.casino-pp.net/?nav=login"><img class="rounded-lg w-full" src="https://igpcrma2n.s3.amazonaws.com/ppcms/halloween-tournament/lp-halloween-deposit-bonus.png" loading="lazy"></a>
         </div>
 
         
@@ -71,7 +71,7 @@
                         <div class="text-center"><a href="https://lobby.hippozino.com/?nav=login"><button class="bg-black hover:bg-gray-800 text-yellow-300 font-bold uppercase my-3 py-3 px-6 rounded-lg">Get Your Deposit Bonus</button></a></div>
                 
                         <div class="text-sm/[14px] py-5 text-slate-300">
-                            Funded players only. Deposit Offer: Wagering from real balance first. 50X wagering the bonus or any winnings from bonus. Contribution varies per game. Selected games only. The wagering requirement calculated on bonus bets only. Bonus once credited is valid for 48 hours from receipt. Max conversion: 3 times the bonus amount or from free spins: £/€/$ 20. Excluded Skrill & Neteller deposits. <a href="https://hippozino.casino-pp.net/promotions?code=IGPHalloweenDepositOffer24" class="underline">Full Terms Apply</a>
+                            Funded players only. Deposit Offer: Wagering from real balance first. 50X wagering the bonus or any winnings from bonus. Contribution varies per game. Selected games only. The wagering requirement calculated on bonus bets only. Bonus once credited is valid for 48 hours from receipt. Max conversion: 3 times the bonus amount or from free spins: £/€/$ 20. Excluded Skrill & Neteller deposits. <a href="https://dukescasino.casino-pp.net/promotions?code=IGPHalloweenDepositOffer24" class="underline">Full Terms Apply</a>
                         </div>
                     
         </div>
@@ -79,7 +79,7 @@
 </div>
 <div class="container mx-auto pt-[5rem] pb-8 px-4 text-center w-full lg:w-8/12 ">
             <h2 class="font-bold text-2xl lg:tex-4xtl leading-tight">Join the Fun This Halloween</h2>
-            <p class="text-lg leading-tight text-orange-100">Whether you're a seasoned player or new to the world of online gaming, there's something for everyone at Hippozino this Halloween. With a wide variety of games, exciting tournaments, and special offers, it's the perfect place to spend the spookiest night of the year. So why wait? Join in the fun this Halloween at Hippozino and make it a night to remember!</p>
+            <p class="text-lg leading-tight text-orange-100">Whether you're a seasoned player or new to the world of online gaming, there's something for everyone at Dukes Casino this Halloween. With a wide variety of games, exciting tournaments, and special offers, it's the perfect place to spend the spookiest night of the year. So why wait? Join in the fun this Halloween at Hippozino and make it a night to remember!</p>
             <div class="text-center"><a href="https://lobby.hippozino.com/?nav=login"><button class="bg-orange-600 hover:bg-orange-400 text-white font-bold uppercase my-3 py-3 px-6 rounded-lg">Play Here</button></a></div>
         </div>
 
@@ -163,10 +163,10 @@ import { useHead } from '#imports';
 const myPromotionsPosts = useFetch(() => fetchApiPromotions());
 // Set page-specific meta tags
 useHead({
-    title: 'Promotions - Hippozino',
+    title: 'Promotions - Dukes Casino',
     meta: [
-        { hid: 'description', name: 'description', content: 'Explore all the best promotions available at Hippozino!' },
-        { name: 'keywords', content: 'promotions, games, casino, Hippozino' }
+        { hid: 'description', name: 'description', content: 'Explore all the best promotions available at Dukes Casino!' },
+        { name: 'keywords', content: 'promotions, games, casino, Dukes Casino' }
     ]
 });
 </script>

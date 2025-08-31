@@ -70,10 +70,10 @@ await useAsyncData('translations', async () => {
 
 // Set page-specific meta tags
 useHead({
-	title: 'Popular Games - Hippozino',
+	title: 'Popular Games - Dukes Casino',
 	meta: [
-		{ hid: 'description', name: 'description', content: 'Explore the most popular games available at Hippozino!' },
-		{ name: 'keywords', content: 'popular, games, casino, Hippozino' }
+		{ hid: 'description', name: 'description', content: 'Explore the most popular games available at Dukes Casino!' },
+		{ name: 'keywords', content: 'popular, games, casino, Dukes Casino' }
 	]
 });
 </script>

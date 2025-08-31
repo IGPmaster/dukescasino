@@ -71,10 +71,10 @@ await useAsyncData('translations', async () => {
 
 // Set page-specific meta tags
 useHead({
-	title: 'Jackpot Games - Hippozino',
+	title: 'Jackpot Games - Dukes Casino',
 	meta: [
-		{ hid: 'description', name: 'description', content: 'Explore the best jackpot games available at Hippozino!' },
-		{ name: 'keywords', content: 'jackpot, games, casino, Hippozino' }
+		{ hid: 'description', name: 'description', content: 'Explore the best jackpot games available at Dukes Casino!' },
+		{ name: 'keywords', content: 'jackpot, games, casino, Dukes Casino' }
 	]
 });
 </script>

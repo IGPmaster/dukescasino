@@ -70,10 +70,10 @@ await useAsyncData('translations', async () => {
 
 // Set page-specific meta tags
 useHead({
-	title: 'Live Games - Hippozino',
+	title: 'Live Games - Dukes Casino',
 	meta: [
-		{ hid: 'description', name: 'description', content: 'Explore the best live games available at Hippozino!' },
-		{ name: 'keywords', content: 'live, games, casino, Hippozino' }
+		{ hid: 'description', name: 'description', content: 'Explore the best live games available at Dukes Casino!' },
+		{ name: 'keywords', content: 'live, games, casino, Dukes Casino' }
 	]
 });
 </script>

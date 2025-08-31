@@ -65,10 +65,10 @@ const { fetch, error, $fetchState } = useFetch(async () => {
 
 // Set page-specific meta tags
 useHead({
-	title: 'Slot Games - Hippozino',
+	title: 'Slot Games - Dukes Casino',
 	meta: [
-		{ hid: 'description', name: 'description', content: 'Explore the best slot games available at Hippozino!' },
-		{ name: 'keywords', content: 'slots, games, casino, Hippozino' }
+		{ hid: 'description', name: 'description', content: 'Explore the best slot games available at Dukes Casino!' },
+		{ name: 'keywords', content: 'slots, games, casino, Dukes Casino' }
 	]
 });
 

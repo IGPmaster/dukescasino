@@ -38,7 +38,7 @@
                     <div v-if="promo.disclaimer !== null">
                         <span v-html="promo.disclaimer" class="text-sm/[12px] py-5 text-slate-800/75"></span>
                         <span class="text-sm/[12px] py-5 text-slate-800/75">
-                            <a :href="'https://dukescasino.casino-pp.net/promotions?code=' + promo.code" 
+                            <a :href="PP_LOBBY_LINK + 'promotions?code=' + promo.code" 
                                 class="no_underline"
                                 target="_blank" 
                                 rel="noopener noreferrer">
@@ -60,7 +60,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { useHead } from '#imports';
-import { pp_promotions, msgTranslate, regLink, loginLink, loadLang, fetchApiPromotions } from '~/composables/globalData';
+import { pp_promotions, msgTranslate, regLink, loginLink, loadLang, fetchApiPromotions, PP_LOBBY_LINK } from '~/composables/globalData';
 
 const loading = ref(true);
 const error = ref(null);

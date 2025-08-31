@@ -45,9 +45,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Dukes Casino - Your Casino!',
+      title: 'Dukes Casino - Your Casino Anywhere!',
       meta: [
-        { name: 'description', content: "Enjoy seamless mobile gaming with Dukes Casino's mobile slots." }
+        { name: 'description', content: "Enjoy seamless mobile gaming with Dukes Casino's mobile slots and casino games." }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
